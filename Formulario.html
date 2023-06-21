@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="Style.css">
+<link href="https://fonts.cdnfonts.com/css/camera-obscura" rel="stylesheet">
+     <title>Formulario</title>
+</head>
+<body>
+
+	  <div style="margin: 24px;">
+        <nav class="navbar navbar-light" style="background-color: skyblue;">
+            <div class="container">
+                <a class="navbar-brand" href="Inicio.html">Inicio</a>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="Menu.html">Menu</a>
+                    </li>
+                    <li>
+                        <a href="Formulario.html">Formulario</a>
+                    </li>
+                    <li>
+                        <a href="ApiMovies.html">ApiMovies</a>
+                    </li>
+                    <li>
+                        <a href="Calculadora.html">Calculadora</a>
+                    </li>
+                    <li>
+                        <a href="CalculadoraF.html">CalculadoraF</a>
+                    </li>
+                    <li>
+                        <a href="Cuestionario.html">Cuestionario</a>
+                    </li>
+                    <li>
+                      <a href="perfil.html">perfil</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+	<titulo2>FORMULARIO</titulo2>
+
+<form id="pedido">
+	<p>Nombre: <input type="text" name="nombre" id="nombre" size="40">
+	</p>
+	<p>Apellido: <input type="text" name="apellido" id="apellido" size="40">
+	</p>
+	<p>Direccion: <input type="text" name="direccion" id="direccion" size="35">
+	</p>
+     <p>Colonia: <input type="text" name="colonia" id="colonia" size="40">
+	</p>
+	<p>Telefono: <input type="text" name="telefono" id="telefono" size="40">
+	</p>
+	<p>Desea Donar 1 peso? 
+		<input type="radio" name="Donar" value="si"> <verde> Si </verde> 
+		<input type="radio" name="Donar" value="no"> <rojo> No </rojo> <br><br>
+		<p>QUE ORDENARA?
+			<select name="menu" id="MENU">
+				<optgroup label="COMIDA">
+				<option value="Palomitas">Palomitas</option>
+				<option value="Hot Dog">Hot Dog</option>
+				<option value="Nachos">Nachos</option>
+				<option value="M&M">M&M</option>
+				<option value="Gomitas">Gomitas</option>
+				</optgroup>
+				<optgroup label="BEBIDAS">
+				<option value="Coca-Cola">Coca-Cola</option>
+				<option value="Sprite">Sprite</option>
+				<option value="Fuzetea">Fuzetea</option>
+				<option value="Horchata">Horchata</option>
+				<option value="Jamaica">Jamaica</option>
+			</optgroup>
+			</select>
+		<input type="submit" value="Orden">
+		<input type="reset" value="Eliminar">
+</form>
+<script type="text/javascript">
+	const form=document.getElementById("Orden");
+	form.addEventListener("submit", function(event){
+		event.preventDefault();
+		const formData=new FormData(form);
+		const orden={
+			nombre:formData.get("nombre"),
+			apellido:formData.get("apellido"),
+			direccion:formData.get("direccion"),
+			colonia:formData.get("colonia"),
+			telefono:formData.get("telefono"),
+			servilletas:formData.get("Donar"),
+			menu:formData.get("MENU"),
+		};
+		localStorage.setItem("orden",JSON.stringify(orden));
+		window.location.href="pedidorealizado.html";
+	});
+</script>
+ <footer>
+            <Link rel="stylesheet" type="text/css" href="footer.css">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section about">
+              <h2>CONTACTAME</h2>
+              <p>ENCUENTRAME TAMBIEN EN: </p>
+              <div class="contact-links">
+                <a href="http://www.facebook.com/miperfil" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="http://www.instagram.com/miperfil" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="http://www.snapchat.com/miperfil" target="_blank"><i class="fab fa-snapchat"></i></a>
+                <a href="http://www.twitter.com/miperfil" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://www.youtube.com/miperfil" target="_blank"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script type="text/javascript">
+        const socialnetworks = document.querySelectorAll('.contact-links a');
+        socialnetworks.forEach(link =>{
+          link.addEventListener('click', e =>{
+            e.preventDefault();
+            window.open(link.href, '_blank');
+          })
+        })
+      </script>
+</script>
+      <div id="footer"></div>
+      <script type="text/javascript">
+        $(function(){
+          $('#footer').load("/escritorio/yo/footer.html");
+        });
+      </script>
+  </footer>
+</body>
+</html>

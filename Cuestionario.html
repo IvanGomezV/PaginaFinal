@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link rel="stylesheet" type="text/css" href="Style.css">
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcd.bootstrapcdn.con/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <title>CUESTIONARIO</title>
+</head>
+<body >
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-light" style="background-color: skyblue;">
+            <div class="container">
+                <a class="navbar-brand" href="Inicio.html">Inicio</a>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="Menu.html">Menu</a>
+                    </li>
+                    <li>
+                        <a href="Formulario.html">Formulario</a>
+                    </li>
+                    <li>
+                        <a href="ApiMovies.html">ApiMovies</a>
+                    </li>
+                    <li>
+                        <a href="Calculadora.html">Calculadora</a>
+                    </li>
+                    <li>
+                        <a href="CalculadoraF.html">CalculadoraF</a>
+                    </li>
+                    <li>
+                        <a href="Cuestionario.html">Cuestionario</a>
+                    </li>
+                    <li>
+                        <a href="perfil.html">Perfil</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+        <style>
+            body{
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                margin: 0;
+            }
+            .quiz-container{
+                background-color: blue;
+                border-radius: 10px;
+                box-shadow: 0 0 10px 2px pink;
+                width: 500px;
+                overflow: hidden;
+            }
+            .quiz-header{
+                padding: 4rem;
+            }
+            h2{
+                padding: 1rem;
+                text-align: center;
+                margin: 0;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            ul li{
+                font-size: 15px;
+                margin: 15px 0;
+            }
+            ul li{
+                cursor: pointer;
+            }
+            button{
+                background-color: red;
+                color: azure;
+                border: none;
+                display: block;
+                width: 500px;
+                cursor: pointer;
+                font-size: 15px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                padding: 15px;
+            }
+            button:hover{
+                background-color: gray;
+            }
+            button:focus{
+                outline: none;
+                background-color: gray;
+            }
+
+
+        </style>
+        <div class="container">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="image-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4yI3tl1bWPUkaCXwhW0T_7tkZGrHdkX7kEg&usqp=CAU" alt="servicio" id="question-image" style="width: 150px; height: auto;"> 
+                    </div>
+                    <h2 id="question">Te gusta nuestro servicio?</h2>
+                    <ul>
+                        <li>
+                            <input type="radio" id="answer" id="a" class="answer">
+                            <label for="a" id="a_text">Si</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="answer" id="b" class="answer">
+                            <label for="b" id="b_text">No</label>
+                        </li><li>
+                            <input type="radio" id="answer" id="c" class="answer">
+                            <label for="c" id="c_text">Tal vez</label>
+                        </li><li>
+                            <input type="radio" id="answer" id="d" class="answer">
+                            <label for="d" id="d_text">Puede mejorar</label>
+                        </li>
+                    </ul>
+                </div>
+                <button id="submit">SIGUIENTE PREGUNTA</button>
+            </div>
+        </div>
+        <script>
+            const quizData = [
+                {
+                    question: "Que año se creo el primer cine?",
+                    Image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1HbrlD48HAEm7507MtypiOJZbegnI4190Ow&usqp=CAU"
+                    a:"1795"
+                    b:"1930"
+                    c:"1895"
+                    d:"2000"
+                    correct: "c"
+                }
+                
+            ]
+        </script>
+        <footer>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section about">
+              <h2>CONTACTAME</h2>
+              <p>ENCUENTRAME TAMBIEN EN:</p>
+              <div class="contact-links">
+                <a href="http://www.facebook.com/miperfil" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="http://www.instagram.com/miperfil" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="http://www.snapchat.com/miperfil" target="_blank"><i class="fab fa-snapchat"></i></a>
+                <a href="http://www.twitter.com/miperfil" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://www.youtube.com/miperfil" target="_blank"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
